@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sisyema coder de la comision 55350</title>
+        <meta name="description" content="Our first page">
+        <meta name="keywords" content="html tutorial template">
+    </head>
+    <body>
+        <h1>
+           CARGOS DISPONIBLES DENTRO DE LA EMPRESA  
+        </h1>
+
+
+        <h3>Cargos Disponible: </h3>
+       <ul>
+       {% for cargo in cargos %}
+            <li>
+                {{ cargo.nombre }}, {{ cargo.vacantes }}  
+            </li>
+       {% endfor %}
+       </ul>
+        
+    </body>
+</html>

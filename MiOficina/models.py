@@ -28,4 +28,3 @@ class clientes(models.Model):
     email = models.EmailField(blank=True)
     fecha_inicio_contrato = models.DateTimeField(auto_now_add=True)  # DateTimeField = guarda la fecha y lka hora de entrega
     description_empresa = models.IntegerField()
-    
