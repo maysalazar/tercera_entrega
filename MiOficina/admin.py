@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from MiOficina.models import jefe,empleados, cliente
+
+admin.site.register(jefe)
+admin.site.register(cliente)
+admin.site.register(empleados)
+

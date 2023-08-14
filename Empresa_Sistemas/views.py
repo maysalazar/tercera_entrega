@@ -9,10 +9,10 @@ def saludar(request):
     respuesta_html = HttpResponse(saludo)
     return  respuesta_html
 
-def saludar_con_html(request):
+def inicio(request):
         http_response = render(
             request=request,
-            template_name='base.html',
+            template_name='inicio.html',
             context={},
         )
         return http_response

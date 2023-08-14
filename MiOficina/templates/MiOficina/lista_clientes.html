@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Clientes asociados
+{% endblock titulo %}
+
+{% block contenido %}
+<section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/logohp.jpg')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>HP Store colombia</h2>
+                <p class="lead mb-0">es una empresa estadounidense con sede en Palo Alto, California, surgida de la separación de Hewlett-Packard en dos empresas, con la cual llevamos trabajando de la mano hace 7 años </p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/logoacer.jpg')"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>acer Colombia</h2>
+                <p class="lead mb-0">trabajamos con la compañia y somos pioneros en la venta de  los
+                 productos más recientes de Acer, desde Chromebooks, laptops, monitores, computadoras de escritorio hasta proyectores para oficina</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="url('static/assets/img/sqlserver.jpg')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>SQL Server Hosting, MSSQL Database Hosting in the Cloud</h2>
+                <p class="lead mb-0">Con el alojamiento del servidor SQL en la nube administrado, puede instalar, implementar y administrar 
+                    científicamente su base de datos rápidamente. Disfrute del proceso de instalación fácil de usar, el panel de control fácil de usar
+                    y una gran cantidad de documentos para resolver sus problemas. Adoptamos un excelente mecanismo de respaldo y recuperación de datos 
+                    para proteger su base de datos contra la pérdida de datos.</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style= img src="{% static/assets/img/logoacer.jpg 'dinosaur'.jpg"/>"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>PasareX logistica de confianza</h2>
+                <p class="lead mb-0">PASAR EXPRESS S.A, cuenta con una política general de tratamiento de bases de datos, en donde usted podrá conocer la finalidad del tratamiento de sus datos, sus derechos y las guías 
+                    de manejo de la información las cuales puede consultar https://www.pasar.net/ o contactarnos al correo contacto@pasar.net</p>
+            </div>
+        </div>
+    </div>
+</section> 
+{% endblock contenido %} 

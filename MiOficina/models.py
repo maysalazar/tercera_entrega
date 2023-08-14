@@ -1,30 +1,44 @@
 from django.db import models
 
-class jefeempresa(models.Model):
-    #los atributos de la clase(son las columnas de la tabla)
-    nobre_jefe = models.CharField(max_length=120) # define una columna que guarda texto en este caso 64 letras maximas
-    apellido_jefe = models.CharField(max_length=120)
-    cc_jefe = models.CharField(max_length=32)
-    profesion = models.CharField(max_length=120)
-    telefono = models.CharField(max_length=20, blank=True)
-    email = models.EmailField(blank=True)
+class Cargos(models.Model):
+    # los atributos de clase (son las columnas de la tabla)
+    nombre = models.CharField(max_length=64)
+    comision = models.IntegerField()
+    
+    def __str__(self):
+        return f"{self.nombre}, {self.comision}"
 
+
+class jefe(models.Model):
+    apellido = models.CharField(max_length=256)
+    nombre = models.CharField(max_length=256)
+    email = models.EmailField(blank=True)
+    telefono = models.CharField(max_length=20, blank=True)
+    dni = models.CharField(max_length=32)
+    
+    
+    def __str__(self):
+        return f"{self.apellido}, {self.nombre}"
+
+class cliente(models.Model):
+    apellido = models.CharField(max_length=256)
+    nombre = models.CharField(max_length=256)
+    dni = models.CharField(max_length=32)
+    email = models.EmailField(blank=True)
+    nombre_empresa = models.CharField(max_length=256)
+    fecha_entrega = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.apellido}, {self.nombre}"
 
 class empleados(models.Model):
-    nombre = models.CharField(max_length=120)
-    apellido = models.CharField(max_length=120)
+    apellido = models.CharField(max_length=256)
+    nombre = models.CharField(max_length=256)
     email = models.EmailField(blank=True)
     telefono = models.CharField(max_length=20, blank=True)
     dni = models.CharField(max_length=32)
-    cardo_asignado = models.CharField(max_length=120)
+    fecha_nacimiento = models.DateField(null=True)
+    
+    def __str__(self):
+        return f"{self.apellido}, {self.nombre}"
 
-
-class clientes(models.Model):
-    nombre_empresa = models.CharField(max_length=120)
-    dni = models.CharField(max_length=32)
-    nobre_dueñor = models.CharField(max_length=64) # define una columna que guarda texto en este caso 64 letras maximas
-    apellido_dueño= models.IntegerField()
-    telefono = models.CharField(max_length=20, blank=True)
-    email = models.EmailField(blank=True)
-    fecha_inicio_contrato = models.DateTimeField(auto_now_add=True)  # DateTimeField = guarda la fecha y lka hora de entrega
-    description_empresa = models.IntegerField()
